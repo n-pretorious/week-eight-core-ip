@@ -7,8 +7,8 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='allPhotos'),
-    path('categories/', views.categories, name='category-list'),
-    path('locations/', views.locations, name='location-list'),
+    path('categories/', views.categories, name='category'),
+    path('locations/', views.locations, name='location'),
     path('category/images/<int:category_name>',
          views.category_view, name='by_category'),
     path('location/images/<int:place>', views.location_view, name='by_location'),

@@ -1,7 +1,54 @@
-<nav class="navbar justify-content-between">
-  <a class="navbar-brand" href="{% url 'allPhotos'%}"><h4>Gallery</h4></a>
-  <form  method='GET' class="form-inline">
-    <input class="form-control mr-sm-2"  name='q' value="{{request.GET.q}}" placeholder="Search...">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
+{% load static %}
+<div class="header-wrapper">
+  <div class="container">
+    <header role="banner">
+      <div class="row row-with-vspace site-branding">
+        <div class="col-sm-2  site-title">
+          <h1 class="site-title-heading">
+            <a href="/" title="Example Home" rel="home"><img src="{% static "images/background.jpeg" %}" class="img-responsive home" id="header" border="0"></a>
+          </h1>
+        </div>
+        <!-- Close col sm2-->
+        <div class="col-sm-10 page-header-top-right">
+          <div class="site-description">
+            <div class="row">
+              <div class="col-sm-8">
+                <h1 class="main-header">Welcome to gallery view</h1>
+                <br>
+              </div>
+              <!-- Close col sm8-->
+              <!-- Close col sm4-->
+            </div>
+            <!-- Close col row-->
+          </div>
+          <!-- Close col site description-->
+          <div class="row main-navigation">
+            <div class="col-md-12">
+              <nav class="navbar navbar-default" role="navigation">
+                <div class="collapse navbar-collapse navbar-primary-collapse">
+                  <div>
+                    <ul id="menu-main-menu" class="nav navbar-nav">
+                      <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28 active"><a href="{% url 'allPhotos'%}">Home</a></li>
+                      <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-15 current_page_item menu-item-35"><a href="{% url 'category'%}">Categories</a></li>
+                      <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="{% url 'location'%}">Locations</a></li>
+                    </ul>
+                  </div>
+                  <div id="search">
+                    <form action="{% url 'image-search'%}" method='GET' class="form-inline">
+                      <input class="form-control mr-sm-2"  name='q' value="{{request.GET.q}}" placeholder="Search...">
+                      <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+                <!--.navbar-collapse-->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--row .site-branding-->
+    </header>
+  </div>
+  <!--.container-->
+</div>
+<!--.header-wrapper-->

@@ -44,8 +44,6 @@ def category_view(request, category_name):
 
   cat = Image.by_category(category_name)
 
-  # title = f"{}".format(place)
-
   context = {
     'cat_results': cat
   }
@@ -65,8 +63,7 @@ def location_view(request, place):
 
 
 def search(request):
-  template = 'photos/search.html'
-  query = request.GET.get('q') #q is the query variable when users search a webite
+  query = request.GET.get('q')
   results = Image.objects.filter(
     Q(category__cat_name__icontains=query)  
     )  
@@ -74,4 +71,4 @@ def search(request):
     'results':results,
     'term':query
   }
-  return render(request, template, context)
+  return render(request, 'photos/search.html', context)
