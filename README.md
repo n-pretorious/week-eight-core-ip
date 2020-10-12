@@ -1,6 +1,6 @@
 # Gallery
 
-# Getting Started
+## Getting Started
 
 First clone the repository from Github and switch to the new directory:
 
