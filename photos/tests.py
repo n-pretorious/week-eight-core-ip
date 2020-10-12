@@ -39,3 +39,4 @@ class ImageTestClass(TestCase):
     Image.update_image(self.image.id,new_img)
     updated_img = Image.get_image_by_id(self.image.id)
     self.assertEqual(updated_img.photo,"photo2.jpg")
+  
