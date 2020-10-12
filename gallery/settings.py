@@ -172,8 +172,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 cloudinary.config(
-    cloud_name='preto',
-    api_key='359528762321257',
-    api_secret='FmzaQMb40ckORrmeRWElRuoMqpU',
+    cloud_name=config('CLOUD_NAME'),
+    api_key=config('API_KEY'),
+    api_secret=config('API_SECRET'),
     secure=True
 )
