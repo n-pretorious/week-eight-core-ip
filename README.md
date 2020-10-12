@@ -12,7 +12,6 @@
 ## Prerequisites
 
 * Python3
-* Virtual Environment
 * Django
 
 ## Getting Started
