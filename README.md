@@ -1,5 +1,20 @@
 # Gallery
 
+## Core Features
+
+* An admin can upload new photos through an admin panel
+* An admin can update a photos details
+* A user can copy an image's link
+* A user can view images by category and location
+* A user can view a photo's details
+* Search for different categories of photos
+
+## Prerequisites
+
+* Python3
+* Virtual Environment
+* Django
+
 ## Getting Started
 
 First clone the repository from Github and switch to the new directory:
