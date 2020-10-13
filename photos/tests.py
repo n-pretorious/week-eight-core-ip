@@ -35,8 +35,8 @@ class ImageTestClass(TestCase):
     self.assertEqual(result,"Image does not exist")
   
   def test_update_image(self):
-    new_img = 'photo2.jpg'
+    new_img = 'test3.jpeg'
     Image.update_image(self.image.id,new_img)
     updated_img = Image.get_image_by_id(self.image.id)
-    self.assertEqual(updated_img.photo,"photo2.jpg")
+    self.assertEqual(updated_img.photo,"test3.jpeg")
   
