@@ -12,7 +12,7 @@
         <img src="{{ img.photo.url }}" alt="" class='img-fluid' 
           onclick="showModal('{{img.img_name}}','{{img.description}}','{{img.photo.url}}','{{img.category}}','{{img.location.country}}', '{{img.location.city}}','{{img.location.locale}}','{{img.photo.url}}',)" width="200px" height="200px">
       </div>
-      {% include 'photos/image_modal.html'%}
+      {% include 'photos/modal.html'%}
       {% endfor %}
     </div>
   </div>

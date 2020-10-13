@@ -15,7 +15,7 @@
           <img src="{{ category.photo.url }}" alt="" class='img-fluid'
             onclick="showModal('{{category.img_name}}','{{category.description}}','{{category.photo.url}}','{{category.category}}','{{category.location.country}}', '{{category.location.city}}','{{category.location.locale}}','{{category.photo.url}}',)">
         </div>
-        {% include 'photos/image_modal.html'%}
+        {% include 'photos/modal.html'%}
         {% endfor %}
       {% else %}
       <h1 class="text-center">There are no images associated with this category</h1>

@@ -10,8 +10,8 @@ urlpatterns = [
     path('categories/', views.categories, name='category'),
     path('locations/', views.locations, name='location'),
     path('category/images/<int:category_name>',
-         views.category_view, name='by_category'),
-    path('location/images/<int:place>', views.location_view, name='by_location'),
+         views.categoryView, name='by_category'),
+    path('location/images/<int:place>', views.locationView, name='by_location'),
     path('search-results/', views.search, name='image-search')
 ]
 

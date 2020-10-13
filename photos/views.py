@@ -40,7 +40,7 @@ def locations(request):
   return render(request, 'photos/locations.html', context)
 
 
-def category_view(request, category_name):
+def categoryView(request, category_name):
 
   cat = Image.by_category(category_name)
 
@@ -48,10 +48,10 @@ def category_view(request, category_name):
     'cat_results': cat
   }
 
-  return render(request, 'photos/category_view.html', context)
+  return render(request, 'photos/categoryView.html', context)
 
 
-def location_view(request, place):
+def locationView(request, place):
 
   locale = Image.by_location(place)
 
@@ -59,7 +59,7 @@ def location_view(request, place):
     'loc_results': locale,
   }
 
-  return render(request, 'photos/location_view.html', context)
+  return render(request, 'photos/locationView.html', context)
 
 
 def search(request):

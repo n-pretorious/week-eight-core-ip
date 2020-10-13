@@ -15,7 +15,7 @@
           <img src="{{ loc_img.photo.url }}" alt="" class='img-fluid'
             onclick="showModal('{{loc_img.img_name}}','{{loc_img.description}}','{{loc_img.photo.url}}','{{loc_img.category}}','{{loc_img.location.country}}', '{{loc_img.location.city}}','{{loc_img.location.locale}}','{{loc_img.photo.url}}',)">
         </div>
-        {% include 'photos/image_modal.html'%}
+        {% include 'photos/modal.html'%}
         {% endfor %}
       {% else %}
       <h1 class="text-center">There are no images associated with this location</h1>
